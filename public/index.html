@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta name="theme-color" content="#000000">
+
+    <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+    <script>
+      // important: iphonex 上面，所有 input 组件，会变得迟钝，焦点需要多次才能获取。且获取焦点后，提示符不可见。
+      // if ('addEventListener' in document) {
+      //   document.addEventListener('DOMContentLoaded', function() {
+      //     FastClick.attach(document.body);
+      //   }, false);
+      // }
+      if(!window.Promise) {
+        document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
+      }
+    </script>
+    <script src="http://at.alicdn.com/t/font_604793_u4rve69i9mp9zfr.js"></script>
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>react-mobile-seed</title>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+  </head>
+  <body id="wrapper" style="height: 100%;">
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root" style="height: 100%;"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <script type="text/javascript">
+      // 3.75让iphone6下fontsize刚好为100px。
+      document.documentElement.style.fontSize = window.innerWidth/3.75 + 'px';
+      document.body.style.fontSize = '14px'; // 在body上将字体还原大小，避免页面无样式字体超大
+      window.ratioToIphone6 = window.innerWidth / 375
+
+      // document.oncontextmenu = function(e) {
+      //   // 阻止部分手机长按会产生弹出框的问题
+      //   e.preventDefault();
+      // }
+    </script>
+  </body>
+</html>
