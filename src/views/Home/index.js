@@ -7,12 +7,10 @@ import './style.css'
 const Widget = () => {
   const history = useHistory()
 
-  console.log(history)
-  
   return (
     <div className="add-album-container">
       主页1
-      <div onClick={() => history.push('login')}>登录</div>
+      <div onClick={() => history.push('login')}>去登录</div>
     </div>
   )
 }

@@ -66,7 +66,16 @@ function init (globalStore) {
   store = globalStore
 }
 
+function getUserInfo () {
+  return {
+    data: {
+      name: 'test'
+    }
+  }
+}
+
 // let's return back our create method as the default.
 export default {
   init,
+  getUserInfo
 }

@@ -8,10 +8,16 @@ import Login from 'views/Login'
 
 const RouterWidget = ({
   store, history, ready,
-  startup
+  startup,
+  reloadAuth
 }) => {
-  useEffect (() => {
+  const prepareApp = async () => {
+    await reloadAuth()
     startup()
+  }
+
+  useEffect (() => {
+    prepareApp()
   }, [])
 
   const renderLoading = () => {
@@ -47,8 +53,9 @@ const mapStateToProps = ({appState}) => {
   }
 }
 
-const mapDispatchToProps = ({appState}) => ({
-  startup: appState.startup
+const mapDispatchToProps = ({appState, auth}) => ({
+  startup: appState.startup,
+  reloadAuth: auth.reload
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(RouterWidget)

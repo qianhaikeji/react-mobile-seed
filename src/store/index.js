@@ -22,8 +22,8 @@ const initPlugin = () => {
   const plugins = []
 
   const persistPlugin = createRematchPersist({
-    whitelist: ['auth', 'cache'],
-    throttle: 1000,
+    whitelist: ['auth'],
+    // throttle: 1000,
     storage: asyncLocalStorage,
     version: 1
   })
