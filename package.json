@@ -23,6 +23,7 @@
     "react-redux": "^7.1.1",
     "react-router-dom": "^5.1.2",
     "react-spinkit": "^3.0.0",
+    "rebass": "^4.0.7",
     "redux": "^4.0.4",
     "redux-persist": "4.10.2",
     "redux-saga": "^0.16.0",
