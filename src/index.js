@@ -1,14 +1,14 @@
 import React from 'react';
 import {render} from 'react-dom';
 import { AppContainer } from 'react-hot-loader'
-import './index.css';
+import './index.scss';
 import App from './router';
-import registerServiceWorker from './registerServiceWorker'
 import initSubscriber from 'redux-subscriber';
 import api from 'services/api';
 import {history, store, reloadSaga} from 'store'
 import moment from 'moment'
 import _ from 'lodash'
+import * as serviceWorker from './serviceWorker';
 
 moment.locale('zh-CN')
 
@@ -45,4 +45,7 @@ if (module.hot) {
   })
 }
 
-registerServiceWorker()
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();

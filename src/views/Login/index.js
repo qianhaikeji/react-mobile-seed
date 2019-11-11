@@ -2,7 +2,7 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import { withRouter } from "react-router-dom"
 import { connect } from 'react-redux'
-import './style.css'
+import './style.scss'
 
 const Widget = ({
   login

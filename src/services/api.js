@@ -1,16 +1,15 @@
 import axios from 'axios'
 import qs from 'qs'
 import _ from 'lodash'
-import AppConfig from 'config/AppConfig'
-import { Toast } from 'antd-mobile'
+// import { Toast } from 'antd-mobile'
 
+const SERVER_URL = process.env.REACT_APP_SERVER_URL
 let store = null
-
-let token = null
+console.log(process.env, SERVER_URL)
 
 let authApi = axios.create({
   // timeout: 10000,
-  baseURL: `${AppConfig.server}/Token`,
+  baseURL: `${SERVER_URL}/Token`,
   headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 })
 
@@ -20,14 +19,9 @@ authApi.interceptors.response.use(function (response) {
   return Promise.reject(error)
 })
 
-let wechatApi = axios.create({
-  // timeout: 10000,
-  baseURL: `${AppConfig.wechatServer}`,
-})
-
 let api = axios.create({
   // timeout: 10000,
-  baseURL: `${AppConfig.server}`,
+  baseURL: `${SERVER_URL}`,
   // headers: {'Content-Type': 'application/x-www-form-urlencoded'},
   // transformRequest: [function (data, headers) {
   //   return qs.stringify(data)
@@ -50,7 +44,7 @@ api.interceptors.response.use(function (response) {
   }
   // Do something with response data
   if (response.data.success === false) {
-    Toast.info(response.data.message, 1)
+    // Toast.info(response.data.message, 1)
     return Promise.reject(response)
   }
   return response
