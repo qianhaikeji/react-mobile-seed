@@ -3,7 +3,7 @@ import { connect, Provider } from 'react-redux'
 import { ConnectedRouter } from 'connected-react-router'
 import { Switch, Route } from "react-router-dom"
 import { ThemeProvider } from 'emotion-theming'
-import theme from '@rebass/preset'
+import theme from 'theme'
 
 import Home from 'views/Home'
 import Login from 'views/Login'

@@ -2,13 +2,12 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import { withRouter } from "react-router-dom"
 import { connect } from 'react-redux'
-import './style.scss'
 
 const Widget = ({
   login
 }) => {
   return (
-    <div className="add-album-container">
+    <div>
       登录
       <div onClick={() => login({
         token: 123123213,
