@@ -1223,6 +1223,11 @@
   resolved "https://registry.npm.taobao.org/@nodelib/fs.stat/download/@nodelib/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha1-K1o6s/kYzKSKjHVMCBaOPwPrphs=
 
+"@rebass/preset@^4.0.5":
+  version "4.0.5"
+  resolved "https://registry.npm.taobao.org/@rebass/preset/download/@rebass/preset-4.0.5.tgz#f4fb9bec85efa1eb658b92fc64fbb4250d0af2fb"
+  integrity sha1-9Pub7IXvoetli5L8ZPu0JQ0K8vs=
+
 "@rematch/core@^1.2.0":
   version "1.2.0"
   resolved "https://registry.npm.taobao.org/@rematch/core/download/@rematch/core-1.2.0.tgz#9583cb12368296682061fadb1b3278164a05e5fb"
@@ -3815,6 +3820,15 @@ emojis-list@^2.0.0:
   version "2.1.0"
   resolved "https://registry.npm.taobao.org/emojis-list/download/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
   integrity sha1-TapNnbAPmBmIDHn6RXrlsJof04k=
+
+emotion-theming@^10.0.19:
+  version "10.0.19"
+  resolved "https://registry.npm.taobao.org/emotion-theming/download/emotion-theming-10.0.19.tgz#66d13db74fccaefad71ba57c915b306cf2250295"
+  integrity sha1-ZtE9t0/MrvrXG6V8kVswbPIlApU=
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    "@emotion/weak-memoize" "0.2.4"
+    hoist-non-react-statics "^3.3.0"
 
 encodeurl@~1.0.2:
   version "1.0.2"

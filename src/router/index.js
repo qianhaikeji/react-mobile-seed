@@ -2,6 +2,8 @@ import React, { Component, useEffect } from 'react'
 import { connect, Provider } from 'react-redux'
 import { ConnectedRouter } from 'connected-react-router'
 import { Switch, Route } from "react-router-dom"
+import { ThemeProvider } from 'emotion-theming'
+import theme from '@rebass/preset'
 
 import Home from 'views/Home'
 import Login from 'views/Login'
@@ -40,9 +42,11 @@ const RouterWidget = ({
 
   return (
     <Provider store={store}>
-      <ConnectedRouter history={history}>
-        {!ready ? renderLoading() : renderContent()}
-      </ConnectedRouter>
+      <ThemeProvider theme={theme}>
+        <ConnectedRouter history={history}>
+          {!ready ? renderLoading() : renderContent()}
+        </ConnectedRouter>
+      </ThemeProvider>
     </Provider>
   )
 }
