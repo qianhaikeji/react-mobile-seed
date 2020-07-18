@@ -11,7 +11,7 @@
     "connected-react-router": "^6.5.2",
     "emotion-theming": "^10.0.19",
     "history": "^4.7.2",
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.19",
     "moment": "^2.21.0",
     "promise": "8.0.1",
     "react": "^16.11.0",
